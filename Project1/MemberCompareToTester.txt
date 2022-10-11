@@ -1,0 +1,36 @@
+Test Case #1
+Requirement: Same name but the first name isn’t capitalized for one.
+Test description and Input Data: Create instances of member first name = “Kevin” and “kevin”, and last name = “John”
+Test name: Kevin John
+Test name: kevin John
+Expected result/output: NEGATIVE
+
+Test Case #2
+Requirement: Two members with the same name.
+Test description and Input Data: Create instances of member first name = “John”, last name = “Doe”
+Test name: John Doe
+Test name: John Doe
+Expected result/output: 0
+
+Test Case #3
+Requirement: Two completely different names.
+Test description and Input Data: Create instances of member first name = “John” and “Alex”, last name = “Smith” and “Park”
+Test name: John Smith
+Test name: Alex Park
+Expected result/output: POSITIVE
+
+Test Case #4
+Requirement: Same first name, different last name.
+Test description and Input Data: Create instances of member first name = “Alex” and “John”, last name = “Smith”
+Test name: Alex Smith
+Test name: John Smith
+Expected result/output: NEGATIVE
+
+Test Case #5
+Requirement: Same last name, different first name.
+Test description and Input Data: Create instances of member first name = “Alex”, last name = “Smith” and “John”
+Test name: Alex Smith
+Test name: Alex John
+Expected result/output: POSITIVE
+
+
