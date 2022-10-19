@@ -1,0 +1,38 @@
+Test Case #1
+Requirement: Valid Date.
+Test date: 1/1/2000
+Expected result/output: true
+
+Test Case #2
+Test description and Input Data: Requirement: Valid range for the month shall be 1-12.
+Test date: -1/2/2000
+Test date: 13/1/2000
+Expected result/output: false
+
+Test Case #3
+Requirement: Number of days in February for a non-leap year shall be 28.
+Test description and Input Data: Create an instance of Date with the month = 2, day > 28, and the year is a non-leap year
+Test date: 2/29/2399
+Expected result/output: false
+
+Test Case #4
+Requirement: Number of days depends on the month.
+Test description and Input Data: Create two instances of Date with the month = 1 and 9, day = 32 and 31, and any positive year.
+Test date: 1/32/2000
+Test date: 9/31/2000
+Expected result/output: false
+
+Test Case #5
+Requirement: No day < 1 and no years < 0.
+Test description and Input Data: Create two instances of Date with the month = 1, day = -3 and 1, and year = 0 and -1
+Test date: 1/-3/0
+Test date: 1/1/-1
+Expected result/output: false
+
+Test Case #6
+Requirement: Valid leap year.
+Test description and Input Data: Create an instance of Date with the month = 2, day = 29, and year = 2020
+Test date: 2/29/2020
+Expected result/output: true
+
+
