@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oitkmg.project4.StoreOrdersController">
+   <children>
+      <ComboBox fx:id="storeOrdersID" layoutX="95.0" layoutY="101.0" onAction="#storeOrdersIDClick" prefWidth="150.0" />
+      <Label layoutX="41.0" layoutY="105.0" text="Order ID" />
+      <Label layoutX="272.0" layoutY="105.0" text="Order Total (with tax) $" />
+      <TextField fx:id="storeOrdersTotal" editable="false" layoutX="395.0" layoutY="101.0" />
+      <ListView fx:id="storeOrdersListView" layoutX="41.0" layoutY="136.0" prefHeight="206.0" prefWidth="505.0" />
+      <Button layoutX="159.0" layoutY="355.0" mnemonicParsing="false" onAction="#storeOrdersCancel" text="Cancel Order" />
+      <Button layoutX="340.0" layoutY="355.0" mnemonicParsing="false" onAction="#export" text="Export Ordors" />
+      <Label layoutX="243.0" layoutY="42.0" text="Store Orders">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oitkmg.project4.NewYorkStyleController">
+   <children>
+      <ComboBox fx:id="nyFlavor" layoutX="104.0" layoutY="119.0" onAction="#nyFlavorSelection" prefHeight="26.0" prefWidth="187.0" />
+      <RadioButton layoutX="107.0" layoutY="166.0" mnemonicParsing="false" onAction="#nySizeButtonPressed" selected="true" text="Small">
+         <toggleGroup>
+            <ToggleGroup fx:id="sizeButtonGroup2" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="163.0" layoutY="166.0" mnemonicParsing="false" onAction="#nySizeButtonPressed" text="Medium" toggleGroup="$sizeButtonGroup2" />
+      <RadioButton layoutX="236.0" layoutY="166.0" mnemonicParsing="false" onAction="#nySizeButtonPressed" text="Large" toggleGroup="$sizeButtonGroup2" />
+      <TextField fx:id="nyCrust" editable="false" layoutX="142.0" layoutY="195.0" />
+      <Label layoutX="104.0" layoutY="198.0" prefHeight="18.0" prefWidth="38.0" text="Crust" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="toppingsNY" layoutX="91.0" layoutY="258.0" prefHeight="182.0" prefWidth="175.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="154.0" layoutY="240.0" text="Toppings" textAlignment="CENTER" />
+      <ListView fx:id="selectedToppingsNY" layoutX="333.0" layoutY="258.0" prefHeight="182.0" prefWidth="175.0" />
+      <Label layoutX="372.0" layoutY="240.0" text="Selected Toppings" />
+      <ImageView fx:id="nyPizzaImg" fitHeight="150.0" fitWidth="200.0" layoutX="321.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="90.0" layoutY="455.0" text="Total" />
+      <TextField fx:id="totalText2" editable="false" layoutX="126.0" layoutY="451.0" prefHeight="26.0" prefWidth="66.0" />
+      <Label layoutX="191.0" layoutY="22.0" text="New York Style Pizza">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="addToppingNY" layoutX="273.0" layoutY="296.0" mnemonicParsing="false" onAction="#addToppingNYClick" prefHeight="26.0" prefWidth="51.0" text="&gt;&gt;" />
+      <Button fx:id="removeToppingNY" layoutX="273.0" layoutY="371.0" mnemonicParsing="false" onAction="#removeToppingNYClick" prefHeight="26.0" prefWidth="50.0" text="&lt;&lt;" />
+      <Button fx:id="addToOrderNY" layoutX="377.0" layoutY="451.0" mnemonicParsing="false" text="Add to Order" />
+   </children>
+</AnchorPane>

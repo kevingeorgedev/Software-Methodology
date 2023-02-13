@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oitkmg.project3.GymManagerController">
+   <center>
+      <TabPane prefHeight="750.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Membership">
+               <content>
+                  <AnchorPane prefHeight="366.0" prefWidth="600.0">
+                     <children>
+                        <GridPane layoutX="52.0" layoutY="118.0" prefHeight="198.0" prefWidth="495.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="296.0000244140625" minWidth="10.0" prefWidth="159.8000244140625" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.8000244140625" minWidth="10.0" prefWidth="334.9999755859375" />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                              <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+                              <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="33.599996948242186" minHeight="10.0" prefHeight="28.799993896484374" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="32.00000610351562" minHeight="10.0" prefHeight="32.00000610351562" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="43.20001831054688" minHeight="10.0" prefHeight="23.999984741210938" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="59.00002136230469" minHeight="10.0" prefHeight="26.599999999999994" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="52.20002441406251" minHeight="10.0" prefHeight="49.80000000000001" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="firstNameTextField" prefHeight="26.0" prefWidth="238.0" GridPane.columnIndex="1" />
+                              <TextField fx:id="lastNameTextField" prefHeight="26.0" prefWidth="237.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <DatePicker fx:id="date" editable="false" prefHeight="26.0" prefWidth="224.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="TOP" prefHeight="27.0" prefWidth="156.0" text="First Name" textAlignment="RIGHT">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="155.0" text="Last Name" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="157.0" text="Date of Birth" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="156.0" text="Location" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="157.0" text="Membership Type" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="addButton" mnemonicParsing="false" onAction="#onAddButtonClick" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Button fx:id="removeButton" mnemonicParsing="false" onAction="#onRemoveButtonClick" text="Remove" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="77.0" text="Bridgewater">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="locations1" />
+                                       </toggleGroup>
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="52.0" text="Edison" toggleGroup="$locations1">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="56.0" text="Franklin" toggleGroup="$locations1">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="71.0" text="Piscataway" toggleGroup="$locations1">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" prefHeight="20.0" prefWidth="66.0" text="Somerville" toggleGroup="$locations1">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" selected="true" text="Standard">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="membershipType1" />
+                                       </toggleGroup>
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Family" toggleGroup="$membershipType1">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Premium" toggleGroup="$membershipType1">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+          <Tab text="Fitness Class">
+               <content>
+                  <AnchorPane prefHeight="311.0" prefWidth="600.0">
+                     <children>
+                        <GridPane layoutX="23.0" layoutY="95.0" prefHeight="235.0" prefWidth="570.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.4" minWidth="10.0" prefWidth="217.599951171875" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.8000122070313" minWidth="10.0" prefWidth="302.400048828125" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="27.0" prefWidth="215.0" text="Class Name" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="27.0" prefWidth="215.0" text="Instructor" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="27.0" prefWidth="214.0" text="Location" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="27.0" prefWidth="212.0" text="First Name" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="27.0" prefWidth="214.0" text="Last Name" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="datePicker2" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="27.0" prefWidth="215.0" text="Date of Birth" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="firstNameTextField2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="lastNameTextField2" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#onCheckInButtonClick" text="Check-In" />
+                                    <Button mnemonicParsing="false" onAction="#onCheckOutButtonClick" text="Check-Out" translateX="20.0" />
+                                 </children>
+                              </HBox>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="27.0" prefWidth="216.0" text="Check-In/Out Type">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" prefHeight="15.0" prefWidth="65.0" text="Member">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="checkGroup" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Guest" toggleGroup="$checkGroup">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" prefHeight="15.0" prefWidth="54.0" text="Cardio">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="className" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" prefHeight="15.0" prefWidth="57.0" text="Pilates" toggleGroup="$className">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Spinning" toggleGroup="$className">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" prefHeight="15.0" prefWidth="51.0" text="Davis">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="instructorName" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" prefHeight="15.0" prefWidth="56.0" text="Denise" toggleGroup="$instructorName">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" prefHeight="15.0" prefWidth="55.0" text="Emma" toggleGroup="$instructorName">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" prefHeight="15.0" prefWidth="62.0" text="Jennifer" toggleGroup="$instructorName">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Kim" toggleGroup="$instructorName">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <RadioButton fx:id="bridgewater" mnemonicParsing="false" text="Bridgewater">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="edison" mnemonicParsing="false" text="Edison">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="franklin" mnemonicParsing="false" text="Franklin">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="piscataway" mnemonicParsing="false" text="Piscataway">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="somerville" mnemonicParsing="false" text="Somerville">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+          <Tab text="Information Hub">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <MenuBar layoutX="186.0" layoutY="33.0" prefHeight="26.0" prefWidth="227.0">
+                          <menus>
+                            <Menu mnemonicParsing="false" text="Member Database">
+                              <items>
+                                    <MenuItem fx:id="printMenuItem" mnemonicParsing="false" text="Print" />
+                                <MenuItem fx:id="printByNameMenuItem" mnemonicParsing="false" text="Print by Name" />
+                                    <MenuItem fx:id="printByCountyMenuItem" mnemonicParsing="false" text="Print by County" />
+                                    <MenuItem fx:id="printByExpirationMenuItem" mnemonicParsing="false" text="Print by Expiration Date" />
+                                    <MenuItem fx:id="printMemFeesMenuItem" mnemonicParsing="false" text="Print with Membership Fees" />
+                                    <MenuItem fx:id="loadMembersMenuItem" mnemonicParsing="false" text="Load Member List" />
+                              </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="Class Schedule">
+                              <items>
+                                <MenuItem fx:id="displayClassesMenuItem" mnemonicParsing="false" text="Show all classes" />
+                                    <MenuItem fx:id="loadClassesMenuItem" mnemonicParsing="false" text="Load class schedule" />
+                              </items>
+                            </Menu>
+                          </menus>
+                        </MenuBar>
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <TextArea id="resultMessage" fx:id="resultMessage" editable="false" prefHeight="240.0" prefWidth="600.0" wrapText="true" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+   </bottom>
+</BorderPane>
